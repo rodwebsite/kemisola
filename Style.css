@@ -1,0 +1,106 @@
+:root {
+    --primary: #002147; 
+    --accent: #C5B358;  
+    --light: #f9f9f9;
+    --dark: #222;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Georgia', serif; /* Classic academic feel */
+    margin: 0;
+    line-height: 1.6;
+    background-color: white;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav ul { display: flex; list-style: none; }
+nav ul li a { color: white; text-decoration: none; padding: 0 15px; font-weight: bold; font-size: 0.9rem;}
+
+#hero {
+    padding: 120px 20px 60px;
+    background: var(--light);
+}
+
+.hero-container {
+    display: flex;
+    max-width: 1100px;
+    margin: auto;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text { flex: 1; }
+.hero-image { flex: 1; text-align: center; }
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    border-bottom: 8px solid var(--accent);
+}
+
+h1 { font-size: 3rem; color: var(--primary); margin-bottom: 10px; }
+.highlight { color: var(--accent); }
+
+.btn {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.btn.secondary { background: var(--accent); color: var(--primary); }
+
+.about-grid {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-img img { width: 100%; border-radius: 50%; border: 5px solid var(--light); }
+
+section { padding: 80px 20px; max-width: 1100px; margin: auto; }
+
+h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; margin-bottom: 30px; }
+
+.job { margin-bottom: 30px; }
+.date { font-weight: bold; color: var(--accent); }
+
+.contact-box {
+    background: var(--primary);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+.contact-box a { color: var(--accent); text-decoration: none; font-size: 1.2rem; }
+
+footer { text-align: center; padding: 40px; background: #eee; font-size: 0.8rem; }
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .hero-container, .about-grid { flex-direction: column; text-align: center; }
+    h1 { font-size: 2rem; }
+}
